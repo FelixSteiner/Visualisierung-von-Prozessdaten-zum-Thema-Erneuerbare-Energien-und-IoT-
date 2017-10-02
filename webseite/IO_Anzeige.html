@@ -1,0 +1,292 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head> 
+
+<title>Heizungssteuerung/I/O Anzeige</title> 
+
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1" media="(device-height: 568px)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="HandheldFriendly" content="True">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<!-- Style Sheets --> 
+<link rel="stylesheet" type="text/css" media="all" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/trunk.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/universal.css" />
+
+<!-- Scripts --> 
+<script type="text/javascript">
+	if (typeof jQuery == 'undefined')
+		document.write(unescape("%3Cscript src='js/jquery-1.9.js'" + 
+															"type='text/javascript'%3E%3C/script%3E"))
+</script>
+<script type="text/javascript" language="javascript" src="js/trunk.js"></script>
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<![endif]-->
+
+
+</head> 
+ 
+<body> 
+
+<div class="container">
+
+	<header class="slide">     <!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
+		<ul id="navToggle" class="burger slide">    <!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
+			<li></li><li></li><li></li>
+		</ul>
+		<h1>I/O Anzeige</h1>
+	</header>
+
+	<nav class="slide">
+		<ul>
+			<li><a href="startseite.html">Startseite</a></li>
+			<li><a href="Datendiagramm.html">Datendiagramm</a></li>
+			<li><a href="Betriebsart.html">Betriebsart</a></li>
+			<li><a href="IO_Anzeige.html" class="active">I/O Anzeige</a></li>
+		</ul>
+	</nav>
+	
+	<div class="content slide">     <!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
+		<ul class="responsive">
+			<li class="header-section">
+				<center>
+					Auf dieser Seite können sie alle Ein- und Ausgänge verwalten.
+				</center>
+			</li>
+			<li class="body-section">
+				<center>
+					<table>
+						<tr>
+							<td>Eingang: </td>
+							<td></td>
+							<td>Ausgang: </td>
+						</tr>
+						<tr>
+							<td> &nbsp; </td>
+							<td> &nbsp; </td>
+							<td> &nbsp; </td>
+						</tr>
+						<tr>
+							<td>
+									<table>
+										<tr>
+											<td>
+												Ausentemperatur:
+											</td>
+											<td>
+												<label for="lblausentemperatur">_</label>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Kesseltemperatur: 
+											</td>
+											<td>
+												<label for="lblkesseltemperatur">_</label>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Vorlauftemperatur: 
+											</td>
+											<td>
+												<label for="lblvorlauftemperatur">_</label>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Rücklauftemperatur: 
+											</td>
+											<td>
+												<label for="lblruecklauftemperatur">_</label>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Puffer/Boiler oben: 
+											</td>
+											<td>
+												<label for="lblpufferboiler_oben">_</label>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Puffer/Boiler unten: 
+											</td>
+											<td>
+												<label for="lblpufferboiler_unten">_</label>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Boilertemperatur: 
+											</td>
+											<td>
+												<label for="lblboilertemperatur">_</label>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Abgastemperatur: 
+											</td>
+											<td>
+												<label for="lblabgastemperatur">_</label>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Brenkammertemperatur: &nbsp; &nbsp; 
+											</td>
+											<td>
+												<label for="lblbrenkammertemperatur">_</label>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Lichtsensor: 
+											</td>
+											<td>
+												<label for="lbllichtsensor">_</label>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Füllstandsensor: 
+											</td>
+											<td>
+												<label for="lblfuellstandsensor">_</label>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Lamda-Wert: 
+											</td>
+											<td>
+												<label for="lbllamds_wert">_</label>
+											</td>
+										</tr>
+									</table>
+							</td>
+							<td> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
+							<td>
+									<table>
+										<tr>
+											<td>
+												Einschub:
+											</td>
+											<td>
+												<label for="lbleinschub">%</label>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Periode: 
+											</td>
+											<td>
+												<label for="lblperiode">sek</label>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Gebläse:
+											</td>
+											<td>
+												<label for="lblgeblaese">%</label>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Bunkeraustrag
+											</td>
+											<td>
+												<button type="button" id="btnbunkeraustrag" class="button button7">Ein</button>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Lamda Heizung
+											</td>
+											<td>
+												<button type="button" id="btnlamda_heizung" class="button button7">Ein</button>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Reiningung Trafo
+											<td>
+												<button type="button" id="btnreinigung_trafo" class="button button7">Ein</button>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Reinigung Motor 
+											<td>
+												<button type="button" id="btnreinigung_motor" class="button button7">Ein</button>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Zündung Heizung
+											<td>
+												<button type="button" id="btnzuendung_heizung" class="button button7">Ein</button>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Zündung Motor
+											<td>
+												<button type="button" id="btnzuedung_motor" class="button button7">Ein</button>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Pufferpumpe
+											<td>
+												<button type="button" id="btnpufferpumpe" class="button button7">Ein</button>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Heizkreispumpe
+											<td>
+												<button type="button" id="btnheizkreispumpe" class="button button7">Ein</button>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Mischer
+											<td>
+												Zu
+												<button type="button" id="btnMischer1" class="button button7">Ein</button>
+												Auf
+												<button type="button" id="btnMischer2" class="button button7">Ein</button>
+											</td>
+										</tr>
+									</table>
+							</td>
+						</tr>
+					</table>
+				</center>
+			</li>
+			<li class="footer-section">
+				<center>
+					Visualisierung von Prozessdaten zum Thema"Erneuerbare Energien und IoT" </br>
+					Von: Benjamin Burglechner, Daniel Leeb, Felix Steiner</br>
+					Rechte: LiTec
+				</center>
+			</li>
+		</ul>
+	</div>
+</div>	
+</body>
+</html>
+
+
+
+
+
+
+

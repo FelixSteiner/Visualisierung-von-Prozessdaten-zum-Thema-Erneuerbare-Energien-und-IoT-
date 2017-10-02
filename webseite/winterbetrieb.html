@@ -1,0 +1,176 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head> 
+
+<title>Heizungssteuerung/Betriebsart/Winterbetrieb</title> 
+
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1" media="(device-height: 568px)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="HandheldFriendly" content="True">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<!-- Style Sheets --> 
+<link rel="stylesheet" type="text/css" media="all" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/trunk.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/universal.css" />
+
+<!-- Scripts --> 
+<script type="text/javascript">
+	if (typeof jQuery == 'undefined')
+		document.write(unescape("%3Cscript src='js/jquery-1.9.js'" + 
+															"type='text/javascript'%3E%3C/script%3E"))
+</script>
+<script type="text/javascript" language="javascript" src="js/trunk.js"></script>
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<![endif]-->
+
+
+</head> 
+ 
+<body> 
+
+<div class="container">
+
+	<header class="slide">     <!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
+		<ul id="navToggle" class="burger slide">    <!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
+			<li></li><li></li><li></li>
+		</ul>
+		<h1>Winterbetrieb</h1>
+	</header>
+
+	<nav class="slide">
+		<ul>
+			<li><a href="startseite.html">Startseite</a></li>
+			<li><a href="Datendiagramm.html">Datendiagramm</a></li>
+			<li><a href="Betriebsart.html" class="active">Betriebsart</a></li>
+			<li><a href="IO_Anzeige.html">I/O Anzeige</a></li>
+		</ul>
+	</nav>
+	
+	<div class="content slide">     <!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
+		<ul class="responsive">
+			<li class="header-section">
+				<center>
+					Hier können sie die Einstellungen des Winterbetriebs festlegen.
+				</center>
+			</li>
+			<li class="body-section">
+				<center>
+					<table>
+						<tr>
+							<td>KesselTemp_Soll</td>
+							<td>
+								&nbsp;
+								d
+								<label for="lblKesselTemp_Soll1">_</label>
+								&deg;C
+							</td>
+							<td>
+								&nbsp;
+								k
+								<label for="lblKesselTemp_Soll2">_</label>
+						</tr>
+						<tr>
+							<td>KesselEin TKessel < TVorlSoll +</td>
+							<td>
+								&nbsp;
+								<label for="lblKesselEin1">_</label>
+								&deg;C
+							</td>
+							<td>
+								oder TPufferO < TVorlSoll/2 + u. TPufferU < TVorlSoll +3&deg;C
+							</td>
+							<td>
+								&nbsp;
+								<label for="lblKesselEin2">_</label>
+								&deg;C
+							</td>
+						</tr>
+						<tr>
+							<td>KesselAus TKessel > d+ Überhöh</td>
+							<td>
+								&nbsp;
+								<label for="lblKesselAus1">_</label>
+								&deg;C
+							</td>
+							<td>
+								oder TPufferU > TVorlSoll/2 + u. TPufferO > TVorlSoll +20&deg;C
+							</td>
+							<td>
+								&nbsp;
+								<label for="lblKesselAus2">_</label>
+								&deg;C
+							</td>
+						</tr>
+						<tr>
+							<td>Leistungsgrenzen</td>
+							<td>
+								Min:
+								<label for="lblLeistungsgrenzenMin">_</label>
+								Kw%
+							</td>
+							<td>
+								&nbsp;
+								Max:
+								<label for="lblLeistungsgrenzenMax">_</label>
+								Kw%
+							</td>
+						</tr>
+						<tr>
+							<td>Pufferpumpe</td>
+							<td>
+								Ein
+								<label for="lblPufferpumpe">_</label>
+								&deg;C über KesselTemp_Soll
+							</td>
+							<td>
+								&nbsp; Aus -0,2&deg;C Hysterese
+							</td>
+						</tr>
+						<tr>
+							<td>Heizungspumpe</td>
+							<td>
+								Ein
+								<label for="lblHeizungspumpeEin">_</label>
+								&deg;C unter KesselTemp_Soll
+							</td>
+							<td>
+								&nbsp; Aus
+								<label for="lblHeizungspumpeAus">_</label>
+								&deg;C über TVorlSoll
+							</td>
+						</tr>
+					</table>
+					</br>
+					<table>
+						<tr>
+							<td><a href="solarbetrieb.html" ><button type="button" id="btnSolarbetrieb" class="button button5">Solarbetrieb</button></a></td>
+							<td><a href="zeitbetrieb.html" ><button type="button" id="btnZeitbetrieb" class="button button5">Zeitbetrieb</button></a></td>
+						</tr>
+					</table>
+				</center>
+				</br>
+				</br>
+				<a href="Betriebsart.html" ><button type="button" id="btnzurueckwinter" class="button button6">zurück</button></a>
+			</li>
+			<li class="footer-section">
+				<center>
+					Visualisierung von Prozessdaten zum Thema"Erneuerbare Energien und IoT" </br>
+					Von: Benjamin Burglechner, Daniel Leeb, Felix Steiner</br>
+					Rechte: LiTec
+				</center>
+			</li>
+		</ul>
+	</div>
+</div>
+</body> 
+</html>
+
+
+
+
+
+
+

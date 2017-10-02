@@ -1,0 +1,203 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head> 
+
+<title>Heizungssteuerung/Betriebsart</title> 
+
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1" media="(device-height: 568px)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="HandheldFriendly" content="True">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<!-- Style Sheets --> 
+<link rel="stylesheet" type="text/css" media="all" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/trunk.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/universal.css" />
+
+<!-- Scripts --> 
+<script type="text/javascript">
+	if (typeof jQuery == 'undefined')
+		document.write(unescape("%3Cscript src='js/jquery-1.9.js'" + 
+															"type='text/javascript'%3E%3C/script%3E"))
+</script>
+<script type="text/javascript" language="javascript" src="js/trunk.js"></script>
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<![endif]-->
+
+
+</head> 
+ 
+<body> 
+
+<div class="container">
+
+	<header class="slide">     <!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
+		<ul id="navToggle" class="burger slide">    <!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
+			<li></li><li></li><li></li>
+		</ul>
+		<h1>Betriebsart</h1>
+	</header>
+
+	<nav class="slide">
+		<ul>
+			<li><a href="startseite.html">Startseite</a></li>
+			<li><a href="Datendiagramm.html">Datendiagramm</a></li>
+			<li><a href="Betriebsart.html" class="active">Betriebsart</a></li>
+			<li><a href="IO_Anzeige.html">I/O Anzeige</a></li>
+		</ul>
+	</nav>
+	
+	<div class="content slide">     <!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
+		<ul class="responsive">
+			<li class="header-section">
+				<center>
+					Hier können sie zwischen den Betriebsarten auswählen.
+				</center>
+			</li>
+			<li class="body-section">
+				<center>
+						<table>
+							<tr>
+								<td>Betriebsart 1:</td>
+							</tr>
+							<tr>
+								<td> &nbsp; &nbsp; &nbsp; </td>
+							</tr>
+							<tr>
+								<td>
+									<a href="sommerbetrieb.html"><button type="button" id="btnsommerbetrieb" class="button button2">Sommerbetrieb</button></a>
+									<a href="winterbetrieb.html"><button type="button" id="btnwinterbetrieb" class="button button3">Winterbetrieb</button></a>
+								</td>
+								<td><a href="handbetrieb.html"><button type="button" id="btnhandbetrieb" class="button">Handbetrieb</button></a></td>
+							</tr>
+							<tr>
+								<td><center><button type="button" id="btnKesselAus" class="button">Kessel Aus</button></center></td>
+							</tr>
+							<tr>
+								<td>
+									<center>
+										<button type="button" id="btnRauchfangkehrfunktion" class="button">Rauchfangkehrfunktion</button>
+										<label for="lblRauchfangkehrfunktion">_</label> &deg;C T Kessel soll
+									</center>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<center>
+										<button type="button" id="btnRauchfangkehrfunktion" class="button">Pufferladung min</button>
+									</center>
+								</td>
+								<td>
+									<button type="button" id="btnRauchfangkehrfunktion" class="button">Pufferladung max</button>
+									<label for="lblRauchfangkehrfunktion">_</label> &deg;C höher
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<center>
+										Puffer oben 
+										<label for="lblPufferoben">_</label> &deg;C
+									</center>
+								</td>
+								<td>
+									Puffer unten 
+									<label for="lblPufferunten">_</label> &deg;C
+								</td>
+							</tr>
+						</table>
+						</br>
+						</br>
+						<table>
+							<tr>
+								<td>Betriebsart 2:</td>
+							</tr>
+							<tr>
+								<td> &nbsp; &nbsp; &nbsp; </td>
+							</tr>
+							<tr>
+								<td>Winterbetrieb</td>
+								<td> &nbsp; &nbsp; &nbsp; </td>
+								<td>Außentemperatur</td>
+								<td> &nbsp; &nbsp; &nbsp; </td>
+								<td><label for="lblAußentemperatur">_</label></td>
+							</tr>
+							<tr>
+								<td>Stand by</td>
+								<td></td>
+								<td>Kesseltemperatur</td>
+								<td></td>
+								<td><label for="lblKesseltemperatur">_</label></td>
+							</tr>
+							<tr>
+								<td>Entschen</td>
+								<td></td>
+								<td>Vorlauftemperatur</td>
+								<td></td>
+								<td><label for="lblVorlauftemperatur">_</label></td>
+							</tr>
+							<tr>
+								<td>Pufferladung min</td>
+								<td></td>
+								<td>Rücklauftemperatur</td>
+								<td></td>
+								<td><label for="lblRücklauftemperatur">_</label></td>
+							</tr>
+							<tr>
+								<td>Pufferladung min</td>
+								<td></td>
+								<td>Rücklauftemperatur</td>
+								<td></td>
+								<td><label for="lblRücklauftemperatur">_</label></td>
+							</tr>
+							<tr>
+								<td><button type="button" id="btnEnter" class="button button4">Enter</button></td>
+								<td></td>
+								<td>Puffer/Boiler oben</td>
+								<td></td>
+								<td><label for="lblPufferBoileroben">_</label></td>
+							</tr>
+							<tr>
+								<td>Einschub <label for="lblEinschub">_</label> %</td>
+								<td></td>
+								<td>Puffer/Boiler unten</td>
+								<td></td>
+								<td><label for="lblPufferBoilerunten">_</label></td>
+							</tr>
+							<tr>
+								<td>Gebläse <label for="lblGeblaese">_</label> %</td>
+								<td></td>
+								<td>Boilertemperatur</td>
+								<td></td>
+								<td><label for="lblBoilertemperatur">_</label></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td>Kesseltemp_AUS</td>
+								<td></td>
+								<td><label for="lblKesseltemp_AUS">_</label></td>
+							</tr>
+						</table>
+				</center>
+			</li>
+			<li class="footer-section">
+				<center>
+					Visualisierung von Prozessdaten zum Thema"Erneuerbare Energien und IoT" </br>
+					Von: Benjamin Burglechner, Daniel Leeb, Felix Steiner</br>
+					Rechte: LiTec
+				</center>
+			</li>
+		</ul>
+	</div>
+</div>
+</body> 
+</html>
+
+
+
+
+
+
+
